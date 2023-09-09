@@ -1,0 +1,15 @@
+{
+  "name": "clean-tdd-node-api",
+  "version": "1.0.0",
+  "description": "Clean Architecture - TDD - Node API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  }
+}
