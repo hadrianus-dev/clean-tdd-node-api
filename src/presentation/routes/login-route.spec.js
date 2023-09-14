@@ -67,4 +67,16 @@ describe('LoginRouteSpec', () => {
     expect(authUsecaseSty.email).toBe(httpRequest.body.email)
     expect(authUsecaseSty.password).toBe(httpRequest.body.password)
   })
+
+  test('Shoud return 500 if no AuthUseCase is provided', () => {
+    const sut = new LoginRouter()
+    const httpRequest = {
+      body: {
+        email: 'any-email',
+        password: 'any-password'
+      }
+    }
+    const HttpResponse = sut.route(httpRequest)
+    expect(HttpResponse.statusCode).toBe(500)
+  })
 })
