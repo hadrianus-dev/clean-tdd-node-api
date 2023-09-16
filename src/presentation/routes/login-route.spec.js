@@ -79,4 +79,16 @@ describe('LoginRouteSpec', () => {
     const HttpResponse = sut.route(httpRequest)
     expect(HttpResponse.statusCode).toBe(500)
   })
+
+  test('Shoud return 500 if no AuthUseCase has no auth methover', () => {
+    const sut = new LoginRouter({})
+    const httpRequest = {
+      body: {
+        email: 'any-email',
+        password: 'any-password'
+      }
+    }
+    const HttpResponse = sut.route(httpRequest)
+    expect(HttpResponse.statusCode).toBe(500)
+  })
 })
