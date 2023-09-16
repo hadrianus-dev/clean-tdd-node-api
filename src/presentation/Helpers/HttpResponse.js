@@ -19,4 +19,11 @@ module.exports = class HttpResponse {
       statusCode: 401
     }
   }
+
+  static ok (token) {
+    return {
+      statusCode: 200,
+      accessToken: token
+    }
+  }
 }
